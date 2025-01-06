@@ -1,6 +1,12 @@
+// filepath: /e:/Exam Portal System/examfront/src/main.ts
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    BrowserAnimationsModule,
+    MatButtonModule
+  ]
+}).catch(err => console.error(err));
